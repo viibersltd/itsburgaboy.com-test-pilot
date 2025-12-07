@@ -1,0 +1,121 @@
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bassline Edition</title>
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonts: Inter (matching the clean, modern look of Better Stack) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/The Bassline Edition.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap" rel="stylesheet">
+
+</head>
+<body class="min-h-screen overflow-y-auto relative selection:bg-indigo-500/30">
+
+    <!-- Background Image - Bassline Edition -->
+    <div class="fixed top-0 left-0 w-full h-full bg-cover bg-center -z-10" style="background-image: url('../media/Background - Bassline Edition.png');"></div>
+
+    <!-- Ambient Background Glows (Better Stack style) -->
+    <div class="glow-point top-[-20%] left-[-10%] opacity-40"></div>
+    <div class="glow-point bottom-[-20%] right-[-10%] opacity-30" style="background: radial-gradient(circle, rgba(169, 169, 169, 0.15) 0%, rgba(0, 0, 0, 0.236) 70%);"></div>
+
+    <!-- Top Navigation -->
+    <header class="w-full p-2 md:p-4 lg:px-8 flex flex-wrap items-center justify-between z-50 relative bg-[#0b0c15]/80 backdrop-blur-sm min-h-[60px]">
+        <!-- Left Section: Hamburger + Logo + Navigation -->
+        <div class="flex items-center gap-4 md:gap-6 flex-1 min-w-0">
+            <!-- Mobile Menu Button -->
+            <button class="sm:hidden flex items-center justify-center w-8 h-8 text-white hover:text-gray-300 transition-colors" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Logo -->
+            <div class="flex items-center gap-2 flex-shrink-0">
+                <a href="../index.html" class="font-medium text-base md:text-lg tracking-tight text-white hover:text-indigo-300 transition-colors duration-300">
+                    <img src="/media/ITSBurgaboy 2.jpg" style="height: 40px;">
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden sm:flex items-center gap-3 md:gap-6">
+                    <a href="https://www.bandsintown.com/a/245213-burgaboy" 
+                    class="text-xs md:text-sm font-medium text-white hover:text-gray-300 transition-colors whitespace-nowrap"
+                    target="_blank"
+                    >SHOWS</a>
+            </nav>
+        </div>
+
+        <!-- Right Section: Time -->
+        <div class="flex items-center gap-2 text-xs font-medium text-gray-500 flex-shrink-0">
+            <i data-lucide="map-pin" class="w-3 h-3 hidden sm:block"></i>
+            <span class="hidden sm:inline">United Kingdom</span>
+            <span id="clock" class="text-gray-400 tabular-nums">--:-- GMT</span>
+        </div>
+    </header>
+
+    <!-- Main Hero Content -->
+    <main class="flex-grow flex flex-col justify-center items-center relative w-full px-6 z-10 pb-32" style="margin-top: 60px;">
+        
+        <!-- Hero Image -->
+        <div class="thebasslineedition-tracklist" style="height: 1500px; position: relative;">
+           <img src="/media/The Bassline Edition Story.jpg">
+        </div>
+        
+        <!-- Streaming Platforms Section -->
+        <div class="streaming-platforms-section relative flex flex-col items-center text-center max-w-4xl mx-auto mt-16 mb-16 z-10">
+            <h2 class="text-2xl md:text-3xl font-medium text-white mb-8 tracking-tight">Stream Now</h2>
+            <div class="streaming-platforms-grid flex flex-wrap justify-center items-center gap-4 md:gap-6">
+                <a href="https://open.spotify.com/artist/2RqbEOyM1cly9xDaFqyVda" target="_blank" rel="noopener noreferrer" class="streaming-platform-link group platform-spotify">
+                    <div class="platform-icon-wrapper">
+                        <i class="fab fa-spotify"></i>
+                    </div>
+                    <span class="platform-name">Spotify</span>
+                </a>
+                <a href="https://music.apple.com/gb/artist/burgaboy/274759144" target="_blank" rel="noopener noreferrer" class="streaming-platform-link group platform-apple">
+                    <div class="platform-icon-wrapper">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <span class="platform-name">Apple Music</span>
+                </a>
+                <a href="https://soundcloud.com/itsburgaboy" target="_blank" rel="noopener noreferrer" class="streaming-platform-link group platform-soundcloud">
+                    <div class="platform-icon-wrapper">
+                        <i class="fab fa-soundcloud"></i>
+                    </div>
+                    <span class="platform-name">SoundCloud</span>
+                </a>
+                <a href="https://music.youtube.com/channel/UCGXdzs6Lu411b2SVtByhK1A" target="_blank" rel="noopener noreferrer" class="streaming-platform-link group platform-youtube">
+                    <div class="platform-icon-wrapper">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span class="platform-name">YouTube Music</span>
+                </a>
+                <a href="https://music.amazon.co.uk/artists/B002N28M3U/burgaboy?referrer=https%3A%2F%2Fmusic.amazon.co.uk%2F" target="_blank" rel="noopener noreferrer" class="streaming-platform-link group platform-amazon">
+                    <div class="platform-icon-wrapper">
+                        <i class="fab fa-amazon"></i>
+                    </div>
+                    <span class="platform-name">Amazon Music</span>
+                </a>
+                <a href="https://www.deezer.com/en/artist/1539254" target="_blank" rel="noopener noreferrer" class="streaming-platform-link group platform-deezer">
+                    <div class="platform-icon-wrapper">
+                        <i class="fab fa-deezer"></i>
+                    </div>
+                    <span class="platform-name">Deezer</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Hero Text (optional, can be added if needed) -->
+        <div class="hero-text-position relative flex flex-col items-center text-center max-w-4xl mx-auto mt-auto">
+            <!-- Additional content can go here -->
+        </div>
+    </main>
+
+
+    <script src="../js/The Bassline Edition.js"></script>
+
+</body></html>
